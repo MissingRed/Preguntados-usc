@@ -1,0 +1,26 @@
+.botones{
+
+    margin: 10px;
+    --background-activated: #90a4ae;
+    height: 5rem;
+    --border-radius: 10px;
+    text-transform: none; white-space: pre-wrap;
+}
+
+.tablero{
+
+    border: #3171e0 2px solid;
+    border-radius: 10px;
+    margin: 10px;
+    border-bottom-color: #3171e0;
+}
+
+#salir{
+
+    font-size: 30px;
+}
+
+.textarea{
+
+    text-align: center;
+}

@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Ranking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-item class="titulos">
+      <ion-label>Sistema de Puntos</ion-label>
+    </ion-item>
+
+    <ion-item class="grud" color="primary">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+
+            <div class="puntos">
+              <div>
+                <ion-img src="../assets/icon/bronce.png" class="img">
+                </ion-img>
+              </div>
+              <div>
+                <ion-label class="textpunt">+5</ion-label>
+              </div>
+            </div>
+
+          </ion-col>
+          <ion-col>
+            <div class="puntos">
+              <div>
+                <ion-img src="../assets/icon/plata.png" class="img">
+                </ion-img>
+              </div>
+              <div>
+                <ion-label class="textpunt">+20</ion-label>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="puntos">
+              <div>
+                <ion-img src="../assets/icon/star.png" class="img">
+                </ion-img>
+              </div>
+              <div>
+                <ion-label class="textpunt">+50</ion-label>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="puntos">
+              <div>
+                <ion-img src="../assets/icon/diamante.png" class="img">
+                </ion-img>
+              </div>
+              <div>
+                <ion-label class="textpunt">+100</ion-label>
+              </div>
+            </div>
+
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+    </ion-item>
+
+    <ion-item class="titulos">
+      <ion-label>Mejores Jugadores</ion-label>
+    </ion-item>
+
+    <ion-item class="items" *ngFor="let usuario of allUsuarios" color="primary">
+      <ion-avatar slot="start">
+        <img src="./assets/icon/mw.png">
+      </ion-avatar>
+      <ion-label class="ion-text-center">
+        {{ usuario.name}}
+      </ion-label>
+
+      <ion-text class="textpunt" slot="end"> {{ usuario.puntaje }} </ion-text>
+      <ion-img class="stars" *ngIf="this.usuario.puntaje >= 5 && this.usuario.puntaje < 20"
+        src="./assets/icon/bronce.png" slot="end"></ion-img>
+      <ion-img class="stars" *ngIf="this.usuario.puntaje >= 20 && this.usuario.puntaje < 50"
+        src="./assets/icon/plata.png" slot="end"></ion-img>
+      <ion-img class="stars" *ngIf="this.usuario.puntaje >= 50 && this.usuario.puntaje < 100"
+        src="./assets/icon/star.png" slot="end"></ion-img>
+      <ion-img class="stars" *ngIf="this.usuario.puntaje >= 100" src="./assets/icon/diamante.png" slot="end"></ion-img>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>

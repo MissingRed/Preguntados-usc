@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid class="grid">
+    <div id="perfil" class="ion-padding">
+      <ion-row>
+        <ion-col>
+        </ion-col>
+        <ion-col>
+          <ion-img class="imgper" src="./assets/icon/mw.png"></ion-img>
+        </ion-col>
+        <ion-col>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+        </ion-col>
+        <ion-col>
+          <div class="user">
+            <ion-title class="ion-text-center">{{ userName }}</ion-title>
+          </div>
+        </ion-col>
+        <ion-col>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <br><br><br><br>
+    <ion-row>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <ion-img class="img" *ngIf="this.userPuntaje >= 5 && this.userPuntaje < 20" src="./assets/icon/bronce.png">
+        </ion-img>
+        <ion-img class="img" *ngIf="this.userPuntaje >= 20 && this.userPuntaje < 50" src="./assets/icon/plata.png">
+        </ion-img>
+        <ion-img class="img" *ngIf="this.userPuntaje >= 50 && this.userPuntaje < 100" src="./assets/icon/star.png">
+        </ion-img>
+        <ion-img class="img" *ngIf="this.userPuntaje >= 100" src="./assets/icon/diamante.png"></ion-img>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <ion-title class="ion-text-center">Puntos: {{ userPuntaje }}</ion-title>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+    <br><br><br>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+      <ion-col>
+        <ion-button class="boton" (click)="Onlogout()" shape="round">Cerrar Sesión</ion-button>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
